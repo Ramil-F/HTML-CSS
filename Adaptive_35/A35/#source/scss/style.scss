@@ -1,0 +1,149 @@
+$colorBackground: white;
+$colorBackgroundWelcome: #d1e7dd;
+$colorHeaderTitle: #2c3e6c;
+$colorHeaderNav: #2c3e50;
+$colorMainTitle: #333333;
+
+@mixin title {
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+@mixin widthBody {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0px auto 2.5rem;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f8f9fa;
+	padding: 0px 20px;
+}
+
+h1 {
+	font-size: 2.5rem;
+	@include title;
+	color: $colorMainTitle;
+}
+
+h2	{
+	font-size: 1.8rem;
+	@include title;
+	color: $colorHeaderTitle;
+}
+
+h3 {
+	font-size: 1.5rem;
+	@include title;
+	color: $colorMainTitle;
+}
+
+	p {
+		font-size: 1.2rem;
+		color: $colorMainTitle;
+		line-height: 1.3;
+	}
+
+header {
+	padding: 20px 20px 0px;
+	text-align: center;
+	@include widthBody;
+	background-color: $colorBackground;
+	border-bottom: 1px solid $colorBackgroundWelcome;
+
+	nav {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		a {
+			color: $colorHeaderNav;
+			font-size: 1.2rem;
+			font-weight: bold;
+		}
+	}
+}
+
+.welcome {
+	@include widthBody;
+	background-color: #d1e7dd;
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+
+	button {
+		color: $colorBackground;
+		background-color: $colorHeaderNav;
+		border-radius: 5px;
+		padding: 10px;
+		margin-top: 30px;
+		font-size: 1.2rem;
+		width: 150px;
+	}
+}
+
+.block {
+	@include widthBody;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+
+	div {
+		width: 100%;
+		padding: 20px;
+		background-color: $colorBackground;
+		border-radius: 5px;
+	}
+}
+
+footer {
+	@include widthBody;
+	background-color: $colorHeaderNav;
+	padding: 20px;
+	text-align: center;
+
+	p {
+		color: $colorBackground;
+		font-size: 1rem;
+	}
+}
+
+@media (min-width: 767px) {
+	.block {
+
+		div {
+			width: calc(100% / 2 - 20px * 1 / 2);
+		}
+	}
+}
+
+@media (min-width: 850px) {
+	h2 {
+		margin-bottom: 0px;
+	}
+
+	header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 20px;
+		nav {
+			flex-direction: row;
+			gap: 20px;
+		}
+}
+
+h2 {
+	text-align: left;
+}
+}
+
+@media (min-width: 992px) {
+	.block {
+
+		div {
+			width: calc(100% / 3 - 20px * 2 / 3);
+		}
+	}
+}
