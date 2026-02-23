@@ -1,0 +1,95 @@
+$colorH1: #d23369;
+$colorText: #555555;
+$colorLink: #2a2a2a;
+$colorLinkButton: #b52a5a;
+$widthBody: 1400px;
+
+@mixin title($size: 1 rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	font-weight: bold;
+}
+
+@mixin text($size: 1 rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	line-height: 1.4;
+}
+
+header {
+	width: 100%;
+	padding: 30px 45px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: white;
+}
+
+h1 {
+	@include title(2rem, $colorH1);
+}
+
+.head_text {
+	@include text(1rem, $colorText);
+	margin: 20px 0px 20px;
+}
+
+.navigator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.link {
+	@include text(1.2rem, $colorLink);
+	text-align: center;
+}
+
+.navigator__link {
+	margin: 10px 15px;
+
+	&:hover {
+		color: $colorH1;
+	}
+}
+
+.link-button {
+	@include text(1.1rem, white);
+	background: $colorH1;
+	border-radius: 3px;
+	padding: 10px 20px;
+	font-weight: bold;
+
+	&:hover {
+		background: $colorLinkButton;
+		color: white;
+	}
+}
+
+@media (min-width: 767px) {
+	header {
+		max-width: $widthBody;
+		width: 100%;
+		margin: 0px auto;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.navigator {
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.navigator__link {
+		margin: 0px 15px;
+	}
+
+	.navigator__link_active {
+		margin-right: 0px;
+	}
+
+	.head_text{
+		margin-bottom: 0px;
+	}
+	
+}

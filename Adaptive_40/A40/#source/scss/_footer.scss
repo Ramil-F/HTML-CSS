@@ -1,0 +1,72 @@
+h6 {
+	@include title(1.4rem);
+}
+
+footer {
+	background: $colorLink;
+	max-width: $widthBody;
+	width: 100%;
+	margin: 20px auto 0px;
+
+	.footer-text {
+		font-size: 1rem;
+		text-align: center;
+		color: #bbbbbb;
+	}
+}
+
+.footer-body {
+	width: 90%;
+	margin: 50px auto;
+	padding: 30px 0px;
+
+	p, a {
+		color: #bbbbbb;
+		text-align: left;
+	}
+
+}
+
+.footer-block {
+	margin: 30px 0px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 30px;
+	border-bottom: 1px solid #bbbbbb;
+	padding-bottom: 50px;
+
+	h4, h6 {
+		color: white;
+		margin-bottom: 20px;
+	}
+}
+
+.quick-links {
+	.footer-navigator {
+		justify-content: left;
+		display: flex;
+		flex-direction: column;
+
+		a {
+			margin: 5px 0px;
+			font-size: 1.2rem;
+		}
+	}
+}
+
+.contact {
+	p {
+		margin-bottom: 10px;
+	}
+
+	div{
+		margin-top: 40px;
+	}
+}
+
+
+@media (min-width: 767px) {
+	.footer-block {
+		grid-template-columns: 2fr repeat(2, 1fr);
+	}
+}
