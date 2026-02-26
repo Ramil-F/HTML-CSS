@@ -1,0 +1,64 @@
+$colorText: #77748b;
+
+footer {
+	width: 100%;
+	max-width: $width;
+	background: $colorNav;
+	padding: 50px 30px;
+	margin: 0px auto;
+}
+
+.footer-body {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 70px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid $colorText;
+}
+
+.information-title {
+	@include title(1.8rem, white);
+}
+
+.information-title__text {
+	margin-bottom: 20px;
+}
+
+.product-title {
+	@include title(1.6rem, white);
+}
+
+.product-menu {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 15px;
+}
+
+.footer-link {
+	@include text(1.1rem, $colorText);
+
+	&:hover {
+		color: white;
+	}
+}
+
+.footer-сopyright {
+
+	@include text(1.1rem, $colorText);
+	padding-top: 40px;
+	text-align: center;
+}
+
+@media (min-width: 500px) {
+	.footer-body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 767px) {
+	.footer-body {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
