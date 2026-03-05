@@ -1,0 +1,185 @@
+@import 'data';
+
+.welcome {
+	background: $colorLine;
+	border-radius: 8px;
+	text-align: center;
+
+	&__body {
+		padding: 70px 20px 50px;
+	}
+
+	&__text {
+		margin: 30px 0px;
+	}
+
+	&-link {
+		background: $colorNav;
+		border-radius: 5px;
+		padding: 10px 20px;
+		@include text(1.1rem, white);
+		font-weight: 550;
+
+		&:hover {
+			background: $colorLinkActive;
+		}
+	}
+
+}
+
+h2 {
+	@include title(2.2rem, $colorLinkActive);
+}
+
+.text {
+	@include text;
+}
+
+.feature {
+	margin: 50px 0px;
+
+	&-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	&-column {
+		background: white;
+		border-radius: 5px;
+		padding: 30px 25px;
+		box-shadow: 0px 0px 5px lightgrey;
+
+		&_active {
+			background: $colorBlock;
+		}
+
+		&__text {
+			color: white;
+		}
+	}
+
+	&-title {
+		@include title(1.5rem, $colorNav);
+
+		&_active {
+			@include title(1.5rem, white);
+		}
+	}
+
+	&-link {
+		background: white;
+		border: 1px solid $colorNav;
+		border-radius: 5px;
+		padding: 10px 20px;
+		@include text(1rem, $colorNav);
+		font-weight: 550;
+
+		&:hover {
+			background: $colorNav;
+			color: white;
+		}
+	}
+
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 35px;
+}
+
+h3 {
+	@include title(1.8rem);
+}
+
+.main {
+
+	&-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	&-column {
+		background: $colorLittleBlock;
+		border-radius: 8px;
+		padding: 40px 20px 20px;
+	}
+
+	&-title {
+		@include title(1.3rem);
+	}
+
+	&-link {
+		background: $colorNav;
+		border-radius: 5px;
+		padding: 10px 15px;
+		@include text(1rem, white);
+		font-weight: 550;
+	}
+
+}
+
+h4 {
+	@include title(1.5rem);
+}
+
+.password {
+	display: block;
+	width: 100%;
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding: 8px 5px;
+	@include text(1rem);
+	margin-bottom: 20px;
+
+	&:focus {
+		border: 2px solid black;
+	}
+}
+
+.right {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+
+	&-column {
+		padding-right: 3px;
+	}
+
+	&-menu {
+		margin-top: 20px;
+		display: flex;
+		gap: 15px;
+		flex-direction: column;
+
+		&__link:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+@media (min-width: 767px) {
+	.feature-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.main-row {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (min-width: 992px) {
+	.feature-row {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.main-row {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.content {
+		grid-template-columns: 2fr 1fr;
+	}
+}

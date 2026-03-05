@@ -1,0 +1,19 @@
+$width: 1200px;
+$colorBody: #fff9f2;
+$colorNav: #e67e22;
+$colorLine: #fae5d3;
+$colorLinkActive: #d35400;
+$colorBlock: #f0b27a;
+$colorLittleBlock: #fdf2e9;
+
+@mixin title($size: 2.2rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	font-weight: bold;
+}
+
+@mixin text($size: 1.2rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	line-height: 1.4;
+}
