@@ -1,0 +1,27 @@
+@import 'reset', 'header', 'main', 'footer', 'data';
+
+body {
+	font-family: Arial, sans-serif;
+	padding: 0px 20px;
+}
+
+header {
+	width: 100%;
+	max-width: $width;
+	margin: 0px auto;
+}
+
+main {
+	width: 100%;
+	max-width: $width;
+	margin: 0px auto;
+}
+
+footer {
+	width: 100%;
+	max-width: $width;
+	margin: 0px auto;
+	border-top: 1px solid $colorHeaderLine;
+	background: $colorNav;
+	padding-bottom: 30px;
+}

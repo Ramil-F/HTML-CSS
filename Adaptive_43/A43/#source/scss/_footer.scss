@@ -1,0 +1,45 @@
+@import 'data';
+
+.footer {
+	&-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 40px;
+		padding: 30px;
+		border-bottom: 1px solid $colorHeaderLine;
+	}
+
+	&-text {
+		display: block;
+		margin: 30px;
+		text-align: center;
+		@include text(1rem, $colorFooterText);
+	}
+
+	&-menu {
+		display: grid;
+		gap: 10px;
+		grid-template-columns: 1fr;
+		margin-top: 20px;
+	}
+
+	&-link {
+		@include text(1rem, $colorFooterText);
+
+		&:hover {
+			color: black;
+		}
+	}
+
+}
+
+h3 {
+	@include title(1.1rem);
+	font-weight: bold;
+}
+
+@media (min-width: 767px) {
+	.footer-row {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}

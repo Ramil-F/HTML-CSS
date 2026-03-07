@@ -1,0 +1,23 @@
+$width: 1200px;
+$borderRadius: 10px;
+$colorNav: #f8f8f8;
+$colorNavActive: #f0f0f0;
+$colorHeaderLine: #e0e0e0;
+$colorPicture: #f5f5f5;
+$colorButtonActive: #333333;
+$colorGrey: #e0e0e0;
+$colorBrown: #8b4513;
+$colorPistachio: #556b2f;
+$colorFooterText: #666666;
+
+@mixin title($size: 2.2rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	font-weight: semibold;
+}
+
+@mixin text ($size: 1.1rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	line-height: 1.3;
+}

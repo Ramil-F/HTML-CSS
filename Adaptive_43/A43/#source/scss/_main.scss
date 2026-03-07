@@ -1,0 +1,201 @@
+@import 'data';
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	margin: 30px 0px;
+
+	&-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 20px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid $colorHeaderLine;
+		margin: 30px 0px 0px;
+
+		&__body {
+			padding-bottom: 20px;
+			transition-duration: 0.5s;
+
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0px 2px 8px lightgrey;
+			}
+		}
+
+		&__picture {
+			margin-bottom: 20px;
+		}
+	}
+
+	&-column {
+		background: white;
+		border: 1px solid $colorPicture;
+		border-radius: $borderRadius;
+
+		&__text {
+			margin: 0px 0px 10px;
+		}
+
+		&__link {
+			padding: 8px;
+			
+			&:hover {
+				background: $colorButtonActive;
+			}
+		}
+	}
+
+	&-link {
+		display: block;
+		text-align: center;
+		background: black;
+		border-radius: 5px;
+		@include text(1.1rem, white);
+		font-weight: bold;
+	}
+
+	&-block {
+		width: 97%;
+		margin: 0px auto;
+	}
+}
+
+.picture {
+	background: $colorPicture;
+	height: 200px;
+	border-radius: $borderRadius $borderRadius 0px 0px;
+}
+
+.text {
+	@include text;
+	font-weight: bold;
+
+	&_body {
+		margin-bottom: 30px;
+	}
+}
+
+h2 {
+	@include title(1.3rem);
+}
+
+h4 {
+	@include text(1.1rem);
+	font-weight: 550;
+}
+
+.range {
+	display: block;
+	width: 100%;
+	margin-bottom: 10px;
+
+	&-row {
+		display: flex;
+		justify-content: space-between;
+		font-weight: 500;
+		margin-bottom: 30px;
+	}
+}
+
+.right {
+
+	&-h4 {
+		margin: 25px 0px 25px;
+	}
+
+	&-button{
+		width: 100%;
+		display: flex;
+		gap: 10px;
+	}
+}
+
+.category {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+	margin: 15px 0px 25px;
+}
+
+.checkbox {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.color {
+	display: flex;
+	gap: 5px;
+	margin: 10px 0px 20px;
+
+	&__body {
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+	}
+
+	&-white {
+		background: white;
+		border: 1px solid grey;
+	}
+
+	&-black {
+		background: black;
+	}
+
+	&-grey {
+		background: $colorGrey;
+	}
+
+	&-brown {
+		background: $colorBrown;
+	}
+
+	&-pistachio {
+		background: $colorPistachio;
+	}
+}
+
+.apply {
+	background: black;
+	border-radius: 5px;
+	@include text(1rem, white);
+	font-weight: bold;
+	padding: 8px 20px;
+}
+
+.reset {
+	background: $colorNavActive;
+	color: black;
+	font-weight: normal;
+}
+
+
+@media (min-width: 767px) {
+	.main {
+		flex-direction: row;
+	}
+	.main-row {
+		width: 100%;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 0px 30px 0px 0px;
+		border-bottom: none;
+		border-right: 1px solid $colorHeaderLine;
+		margin: 0px 0px 0px 0px;
+	}
+	.right {
+		width: 25%;
+	}
+}
+
+@media (min-width: 992px) {
+	.main {
+
+		&-row {
+			grid-template-columns: repeat(3, 1fr);
+			
+		}
+	}
+}
