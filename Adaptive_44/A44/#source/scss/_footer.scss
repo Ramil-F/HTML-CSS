@@ -1,0 +1,44 @@
+@import 'data';
+
+.footer-row {
+	border-top: 1px solid $colorHeaderBorder;
+	border-bottom: 1px solid $colorHeaderBorder;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 20px;
+}
+
+.footer-column {
+	margin: 30px;
+
+	&__title {
+		margin-bottom: 30px;
+	}
+}
+
+.footer-menu {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.footer-link {
+	@include text(1rem, $colorCategory);
+
+	&:hover {
+		color: $colorProductLink;
+	}
+}
+
+.footer-copyright {
+	@include text(0.9rem, $colorCategory);
+	display: block;
+	text-align: center;
+	margin: 30px;
+}
+
+@media (min-width: 767px) {
+	.footer-row {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

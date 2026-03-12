@@ -1,0 +1,25 @@
+$colorBody: #f8f9fa;
+$colorHeaderBorder: #e0e0e0;
+$colorHeaderButton: #f0f0f0;
+$colorNav: #555555;
+$colorNavActive: #3498db;
+$colorImgOne: #f5f5f5;
+$colorImgTwo: #eeeeee;
+$colorSale: #e74c3c;
+$colorCategory: #7f8c8d;
+$colorComment: #f39c12;
+$colorProductLink: #2980b9;
+$colorReset: #ecf0f1;
+$width: 1200px;
+
+@mixin title($size: 2rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	font-weight: 600;
+}
+
+@mixin text($size: 1rem, $color: black) {
+	font-size: $size;
+	color: $color;
+	line-height: 1.4;
+}

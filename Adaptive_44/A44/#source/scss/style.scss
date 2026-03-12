@@ -1,0 +1,39 @@
+@import 'reset', 'header', 'main', 'footer', 'data';
+
+body {
+	font-family: Arial, sans-serif;
+	background: $colorBody;
+	padding: 20px;
+}
+
+header {
+	width: 100%;
+	max-width: $width;
+	margin: 0px auto;
+}
+
+h1 {
+	@include title;
+}
+
+h2 {
+	@include title(1.5rem);
+}
+
+h3 {
+	@include title(1.2rem);
+}
+
+main {
+	width: 100%;
+	max-width: $width;
+	margin: 30px auto;
+}
+
+footer {
+	width: 100%;
+	max-width: $width;
+	margin: 30px auto;
+	background: white;
+	padding-bottom: 10px;
+}
